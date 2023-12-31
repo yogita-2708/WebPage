@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Figtree&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    text-decoration: none; 
+    outline: none; 
+    border: none; 
+    box-sizing: border-box; 
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body { 
+    font-family: Figtree, sans-serif; 
+}
+
+header { 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    /* background: #ff5b50; */ 
+    background: #ff6c6b; 
+    display: flex; 
+    align-items: center; 
+    padding: .3rem; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .navbar { 
+    display: flex; 
+    padding-left: 6rem; 
+}
+
+header .navbar a { 
+    color: black; 
+    margin: 0 35px; 
+    font-size: 1.2rem; 
+    font-weight: 600; 
+    letter-spacing: 2px; 
+}
+
+header .image img { 
+    height: 35px; 
+    margin-left: 30px; 
+}
+
+.firstrow { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    height: 100vh;
+}
+
+.first-part { 
+    padding: 6.5rem; 
+    background: rgb(255,252,163); 
+    background: linear-gradient(90deg, rgb(253, 250, 152) 72%, rgba(255,205,179,0.989233193277311) 100%); 
+}
+
+.first-part h1 { 
+    font-size: 3rem; 
+    letter-spacing: .5rem; 
+    margin-bottom: 50px; 
+    margin-top: 37px; 
+    text-align: justify; 
+}
+
+.first-part p { 
+    margin-bottom: 50px; 
+    font-size: 16px; 
+    line-height: 1.7; 
+}
+
+.first-part a { 
+    display: inline-block; 
+    padding: 10px 65px; 
+    background-color: #ff6c6b; 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 100; 
+}
+
+.second-part { 
+    height: auto; 
+    overflow: hidden;
+}
+
+.second-part img { 
+    width: 100%; 
+    height: 100%; 
+    transform: scale(1.26, 1); 
+    transform-origin: right center; 
+}
+
+.secondrow { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    padding: 10rem 5.5rem; 
+    gap: 40px; 
+    background: rgb(255,246,158); background: linear-gradient(110deg, rgb(253, 250, 152) 10%, rgba(255,188,229,1) 78%, rgba(249,119,193,1) 100%); 
+}
+
+.image-part { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px 20px; 
+}
+
+.image-part img { 
+    width: 100%; 
+    object-fit: cover; 
+}
+
+#img1, #img3 { 
+    width: 100%; 
+    height: 34vh; 
+}
+
+#img2 { 
+    grid-row: span 2; 
+    height: 70vh; 
+}
+
+.contentbox-part { 
+    background-color: #ff6c6b; 
+    height: 38vh; 
+    margin: 110px 140px 50px 0px; 
+    padding: 25px; 
+}
+
+#paraheading { 
+    font-size: 1.3rem; 
+    margin-bottom: 20px; 
+}
+
+h1 { 
+    font-size: 2.7rem; 
+    margin-bottom: 25px; 
+    letter-spacing: .5rem; 
+}
+
+#click { 
+    color: black; 
+    cursor: pointer; 
+    display: inline-flex; 
+    font-size: 17px; 
+}
+
+#arrow { 
+    width: 100%; 
+    margin: -5px 0px 5px 15px; 
+}
+
+
+/* Media Queries */
+@media (max-width: 1160px) 
+{ 
+    body {
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+    }
+
+    header .navbar {
+        margin-left: 20px;
+    }
+    
+    header .navbar a {
+        font-size: 1rem;
+        margin: 0 20px;
+    }
+    header .image img {
+        margin-left: 40px;
+    }
+    .firstrow {
+        height: auto;
+    }
+    .first-part {
+        padding: 3.5rem;
+        /* height: 93vh; */
+        height: 100%;
+    }
+
+    .first-part h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .first-part p {
+        font-size: 17px;
+    }
+
+    .first-part a {
+        padding: 10px 45px;
+        font-size: 16px;
+    }
+
+    .second-part {
+        /* height: 93vh; */
+        height: 100%;
+    }
+
+    .second-part img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .secondrow {
+        padding: 7rem 3.5rem;
+    }
+
+    #img1, #img3 { 
+        width: 100%; 
+        height: 25vh; 
+    }
+    
+    #img2 { 
+        grid-row: span 2; 
+        height: 51vh; 
+    }
+
+    .contentbox-part {
+        height: 30vh;
+        margin: 90px 60px 40px 0px;
+        padding: 30px;
+    }
+
+    #paraheading {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+
+    #click {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) 
+{ 
+    header .navbar {
+        margin: 0;
+    }
+
+    header .navbar a {
+        margin: 0 9px; 
+        font-size: .8rem;
+    }
+
+    .firstrow { 
+        height: auto;
+    }
+
+    .first-part {
+        padding: 3rem;
+    }
+
+    .first-part h1 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .first-part p {
+        font-size: 16px;
+    }
+
+    .first-part a {
+        padding: 10px 35px;
+        font-size: 15px;
+    }
+
+    .secondrow {
+        padding: 5rem 2.5rem;
+    }
+
+    .secondrow .contentbox-part {
+        align-items: center;
+    }
+
+    .contentbox-part {
+        height: 22vh;
+        margin: 130px 0px 30px 0px;
+        padding: 20px;
+    }
+
+    #paraheading {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    #click {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    header .navbar {
+        display: none;
+    }
+
+    header .image img {
+        margin-left: 0px;
+    }
+
+    .firstrow {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background: rgb(255,252,163); 
+        background: linear-gradient(90deg, rgb(253, 250, 152) 72%, rgba(255,205,179,0.989233193277311) 100%); 
+    }
+
+    .first-part h1 {
+        font-size: 1.5rem;
+    }
+
+    .first-part a {
+        margin-bottom: 10px;
+    }
+
+    .second-part img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .secondrow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentbox-part {
+        height: 25vh;
+        margin: 70px 0px 30px 0px;
+        padding: 20px;
+    }
+
+    #arrow { 
+        margin: -7px 0px 0px 15px;
+    }
+
+    #paraheading {
+        margin-bottom: 20px;
+    }
+
+    .contentbox-part h1 {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+}
